@@ -118,7 +118,9 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = { char = "│" }
+    },
   },
 
   -- "gc" to comment visual regions/lines
@@ -153,6 +155,14 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
+
+  {
+    'github/copilot.vim',
+    lazy = false,
+    config = function()
+      vim.g.copilot_assume_mapped = true
+    end
+  }
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
