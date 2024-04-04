@@ -44,4 +44,6 @@ vim.o.relativenumber = true
 
 vim.o.scrolloff = 8
 
+vim.o.wrap = false
+
 -- vim: ts=2 sts=2 sw=2 et
